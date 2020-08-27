@@ -23,7 +23,7 @@ services:
       - web
     labels:
       # Dashboard
-      - "traefik.http.routers.traefik.rule=Host(`dashboard.fabiorvs.com`)"
+      - "traefik.http.routers.traefik.rule=Host(`dashboard.fabiorvs.dev.br`)"
       - "traefik.http.routers.traefik.service=api@internal"
       - "traefik.http.routers.traefik.tls.certresolver=letsencrypt"
       - "traefik.http.routers.traefik.entrypoints=websecure"
@@ -37,7 +37,7 @@ services:
     networks:
       - web
     labels:
-      - "traefik.http.routers.app1.rule=Host(`web.fabiorvs.com`)"
+      - "traefik.http.routers.app1.rule=Host(`web.fabiorvs.dev.br`)"
       - "traefik.http.routers.app1.entrypoints=websecure"
       - "traefik.http.routers.app1.tls=true"
       - "traefik.http.routers.app1.tls.certresolver=letsencrypt"
